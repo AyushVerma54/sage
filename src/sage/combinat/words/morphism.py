@@ -3039,25 +3039,6 @@ class WordMorphism(SageObject):
 
         TESTS:
 
-        sage: WordMorphism('a->a').is_growing('a')
-            False
-            sage: WordMorphism('a->a').is_growing()
-            False
-            sage: WordMorphism('a->ab').is_growing('a')
-            True
-            sage: WordMorphism('a->ab').is_growing()
-            True
-            sage: WordMorphism('a->,b->a').is_growing('a')
-            False
-            sage: WordMorphism('a->,b->a').is_growing('b')
-            True
-            sage: WordMorphism('a->,b->a').is_growing()
-            False
-            sage: WordMorphism('a->ab,b->ba').is_growing()
-            True
-            sage: WordMorphism('a->a,b->b').is_growing()
-            False
-
         Make sure that :issue:`31454` is fixed::
 
             sage: WordMorphism('a->a').is_growing('a')
